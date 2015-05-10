@@ -1,2 +1,11 @@
+# jekyll
 _site/
 .sass-cache/
+.jekyll-metadata
+
+# ruby
+.ruby-version
+.ruby-gemset
+
+.DS_Store
+*.*~
