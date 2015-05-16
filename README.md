@@ -1,6 +1,6 @@
 # gssbzn
 
-A small blog under cunstruction.
+A small blog under construction.
 
 ## License
 
