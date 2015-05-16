@@ -17,7 +17,7 @@
  *
  */
 (function () {
-  'use strict'; 
+  'use strict';
 
 
   // Check to make sure service workers are supported in the current browser,
@@ -69,14 +69,17 @@
     });
   }
 
+  var distance = $('.header-title').offset().top,
+  $window = $(window);
   // Your custom JavaScript goes here
-  $(window).scroll(function() {
-    console.log("test");
-    if ($(this).scrollTop() > 1){
-      $('header').addClass('sticky');
+  $window.scroll(function() {
+    if ( $window.scrollTop() >= distance ) {
+      $('#main-header').addClass('sticky');
+      $('.header-wrapper').addClass('sticky')
     }
     else{
-      $('header').removeClass('sticky');
+      $('#main-header').removeClass('sticky');
+      $('.header-wrapper').removeClass('sticky')
     }
   });
 })();

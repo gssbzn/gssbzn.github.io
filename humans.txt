@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Gustavo Bazan @gssbzn
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3
