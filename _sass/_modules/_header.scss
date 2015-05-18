@@ -25,6 +25,10 @@ header{
       white-space: nowrap;
       .title{
         float: left;
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
       }
     }
   }

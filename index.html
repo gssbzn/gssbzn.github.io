@@ -2,24 +2,40 @@
 layout: site
 body_class: color-purple
 ---
+<h1>Welcome!</h1>
 
-<main>
-  <h1 id="hello">Hello!</h1>
-
-
-  <h2 id="get-started">Get Started.</h2>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-  <p>Lorem ipsum.</p>
-
-</main>
+<div class="page-header">
+<!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+    <h3 class="xxlarge text-divider"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <div class="page-header__excerpt g-wide--push-1 g-wide--pull-1">
+      {{ post.excerpt }}
+    </div>
+  {% endfor %}
+</div>
+<div class="container-medium">
+  <nav class="article-nav">
+    {% if paginator.previous_page %}
+      <a class="article-nav-link article-nav-link--prev" href="{{ paginator.previous_page_path }}">
+        <p class="article-nav-count">{{ paginator.previous_page }}</p>
+        <p>Previous</p>
+      </a>
+    {% else %}
+      <span class="article-nav-link">
+        <p class="article-nav-count"></p>
+        <p></p>
+      </span>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a class="article-nav-link article-nav-link--next" href="{{ paginator.next_page_path }}">
+        <p class="article-nav-count">{{ paginator.next_page }}</p>
+        <p>Next</p>
+      </a>
+    {% else %}
+      <span class="article-nav-link">
+        <p class="article-nav-count"></p>
+        <p></p>
+      </span>
+    {% endif %}
+  </nav>
+</div>
