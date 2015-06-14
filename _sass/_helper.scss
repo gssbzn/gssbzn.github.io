@@ -51,7 +51,7 @@
 .color--media-secondary { color: $colorMediaSecondary; }
 .color--performance-secondary { color: $colorPerformanceSecondary; }
 
-
+.text-color--primary { color: $colorPrimary }
 
 /*==========  TEXT DIVIDER  ==========*/
 
@@ -63,10 +63,10 @@
     content: '';
     display: block;
     position: absolute;
-    width: 40%;
+    width: 80%;
     height: 1px;
     box-shadow: 0 1px 0 0 $colorGrayKeyline;
-    left: 30%;
+    left: 10%;
     bottom: -$lineHeight/2;
   }
 
@@ -120,3 +120,22 @@
     display: inline-block;
   }
 }
+
+/**
+ * Add/remove margins
+ */
+.push           { margin:       $lineHeight!important; }
+.push--top      { margin-top:   $lineHeight!important; }
+.push--right    { margin-right: $lineHeight!important; }
+.push--bottom   { margin-bottom:$lineHeight!important; }
+.push--left     { margin-left:  $lineHeight!important; }
+.push--ends     { margin-top:   $lineHeight!important; margin-bottom:$lineHeight!important; }
+.push--sides    { margin-right: $lineHeight!important; margin-left:  $lineHeight!important; }
+
+.push-half          { margin:       ($lineHeight/2)!important; }
+.push-half--top     { margin-top:   ($lineHeight/2)!important; }
+.push-half--right   { margin-right: ($lineHeight/2)!important; }
+.push-half--bottom  { margin-bottom:($lineHeight/2)!important; }
+.push-half--left    { margin-left:  ($lineHeight/2)!important; }
+.push-half--ends    { margin-top:   ($lineHeight/2)!important; margin-bottom:($lineHeight/2)!important; }
+.push-half--sides   { margin-right: ($lineHeight/2)!important; margin-left:  ($lineHeight/2)!important; }

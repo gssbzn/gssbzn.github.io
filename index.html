@@ -1,18 +1,18 @@
 ---
 layout: site
-body_class: color-purple
+body_class: background-primary
 ---
-<h1>Welcome!</h1>
 
-<div class="page-header">
 <!-- This loops through the paginated posts -->
-  {% for post in paginator.posts %}
-    <h3 class="xxlarge text-divider"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <div class="page-header__excerpt g-wide--push-1 g-wide--pull-1">
+{% for post in paginator.posts %}
+  <div class="push--ends">
+    <h2 class="xxlarge"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p class="">
       {{ post.excerpt }}
-    </div>
-  {% endfor %}
-</div>
+    </p>
+  </div>
+{% endfor %}
+
 <div class="container-medium">
   <nav class="article-nav">
     {% if paginator.previous_page %}

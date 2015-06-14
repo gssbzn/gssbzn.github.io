@@ -5,9 +5,16 @@
 **/
 
 a {
-  color: $colorBlue;
-}
-
-a:hover {
+  color: $colorPrimary;
   text-decoration: none;
+
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $colorPrimary;
+    text-decoration: none;
+  }
 }
