@@ -13,29 +13,31 @@ body_class: background-primary
   </div>
 {% endfor %}
 
-<div class="container-medium">
-  <nav class="article-nav">
-    {% if paginator.previous_page %}
-      <a class="article-nav-link article-nav-link--prev" href="{{ paginator.previous_page_path }}">
-        <p class="article-nav-count">{{ paginator.previous_page }}</p>
-        <p>Previous</p>
-      </a>
-    {% else %}
-      <span class="article-nav-link">
-        <p class="article-nav-count"></p>
-        <p></p>
-      </span>
-    {% endif %}
-    {% if paginator.next_page %}
-      <a class="article-nav-link article-nav-link--next" href="{{ paginator.next_page_path }}">
-        <p class="article-nav-count">{{ paginator.next_page }}</p>
-        <p>Next</p>
-      </a>
-    {% else %}
-      <span class="article-nav-link">
-        <p class="article-nav-count"></p>
-        <p></p>
-      </span>
-    {% endif %}
-  </nav>
+<div class="container-medium push--ends">
+  {% if paginator.total_pages > 1 %}
+    <nav class="article-nav">
+      {% if paginator.previous_page %}
+        <a class="article-nav-link article-nav-link--prev" href="{{ paginator.previous_page_path }}">
+          <p class="article-nav-count">{{ paginator.previous_page }}</p>
+          <p>Previous</p>
+        </a>
+      {% else %}
+        <span class="article-nav-link">
+          <p class="article-nav-count"></p>
+          <p></p>
+        </span>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a class="article-nav-link article-nav-link--next" href="{{ paginator.next_page_path }}">
+          <p class="article-nav-count">{{ paginator.next_page }}</p>
+          <p>Next</p>
+        </a>
+      {% else %}
+        <span class="article-nav-link">
+          <p class="article-nav-count"></p>
+          <p></p>
+        </span>
+      {% endif %}
+    </nav>
+  {% endif %}
 </div>
