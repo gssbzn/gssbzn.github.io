@@ -1,43 +1,21 @@
----
-layout: site
-body_class: background-primary
----
+<!doctype html>
+<html class="no-js" lang="en-US">
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <div class="push--ends">
-    <h2 class="xxlarge"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="">
-      {{ post.excerpt }}
-    </p>
-  </div>
-{% endfor %}
+<head>
+  <meta charset="utf-8">
+  <title>Gustavo Bazan</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="container-medium push--ends">
-  {% if paginator.total_pages > 1 %}
-    <nav class="article-nav">
-      {% if paginator.previous_page %}
-        <a class="article-nav-link article-nav-link--prev" href="{{ paginator.previous_page_path }}">
-          <p class="article-nav-count">{{ paginator.previous_page }}</p>
-          <p>Previous</p>
-        </a>
-      {% else %}
-        <span class="article-nav-link">
-          <p class="article-nav-count"></p>
-          <p></p>
-        </span>
-      {% endif %}
-      {% if paginator.next_page %}
-        <a class="article-nav-link article-nav-link--next" href="{{ paginator.next_page_path }}">
-          <p class="article-nav-count">{{ paginator.next_page }}</p>
-          <p>Next</p>
-        </a>
-      {% else %}
-        <span class="article-nav-link">
-          <p class="article-nav-count"></p>
-          <p></p>
-        </span>
-      {% endif %}
-    </nav>
-  {% endif %}
-</div>
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <p>Hello world! This is HTML5 Boilerplate.</p>  
+</body>
+
+</html>
